@@ -1,56 +1,46 @@
-## Getting Started
+## Commands
 
-This guide details how to set up the development environment for this React project.
+```bash
+# Opens up the cypress app UI
+$ npm run cypress:open
 
-### Prerequisites
+# Runs the tests headlessly
+$ npm run cypress:run --browser electron
 
-* Node.js (version 14 or later): [Download Node.js](https://nodejs.org/en/download)
-* Git version control (optional, but recommended): [Download Git](https://git-scm.com/downloads)
+# See the cypress CLI page for more info
 
-### Steps
-
-**1. Clone the Repository (if using Git)**
-
-```Bash
-git clone https://github.com/Penstack-Inc/interview.git
 ```
 
-**2. Navigate to the Project Directory**
+## Configuring for environments
 
-```Bash
-cd technical
-```
+The environment details are stored in the `cypress.json` file. To change environment, change the `baseUrl` to your desired env.
 
-**3. Install Dependencies**
+To enable the framework work with products, a product url path needs to be added into `cyress/fixtures/productData.json`, with the key of `productUrl`.
 
-The project uses a combination of npm packages for development and production. To install them all, run:
+## Tech Details
 
-```Bash
-npm install
-```
+* Cypress - Self proclaiming E2E test framework. Designed to keep UI tests simple and reliable. https://www.cypress.io/
 
-Important Note: If you encounter setup errors during installation, you might need to force a reinstall of dependencies to ensure everything resolves correctly:
+* Cypress/Mocha + Chai - Cypress uses the Mocha & Chai combination for test runner and assertion library.
 
-```Bash
-npm install --force
-```
+## Project Structure
 
-**4. Start the Development Server**
+```bash
+# All the test code lives in here
+./cypress/
 
-The project utilizes Vite for development. To launch the development server and see the application running in your browser, execute:
+# New commands and supporting helpers are stored in this directory
+./cypress/support/
 
-```Bash
-npm run dev
-```
+# Page helpers are stored in here. This is where custom cypress commands
+# are stored such as: cy.visitProductPage();
+./cypress/support/pages/
 
-This will typically open your default browser at http://localhost:3000/ (the exact port may vary).
+# Storage of static data. Can be accessed by cy.fixtures('filename') command. I suggest a read up on the async nature of Cypress prior to this. An example of its use resides in the ./cypress/pages/product.js file, the cy.visitProductPage() function...
+./cypress/fixtures/
 
-Development Scripts
+# Cypress plugins
+./cypress/plugins/
 
-The package.json file defines several scripts to streamline development tasks:
-
-npm run dev: Starts the development server using Vite.
-npm run preview: Starts a preview server using Vite (exact behavior might vary depending on project configuration).
-
-Additional Notes: For more advanced usage or customization, refer to the documentation for Vite, TypeScript, ESLint, and other technologies used in this project.
-By following these steps, you should be able to set up the development environment for your React project and start coding!
+# Location of all test files
+./cypress/integration/
