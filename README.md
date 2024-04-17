@@ -16,7 +16,6 @@ $ npx cypress open
 
 * Cypress - Self proclaiming E2E test framework. Designed to keep UI tests simple and reliable. https://www.cypress.io/
 
-* Cypress/Mocha + Chai - Cypress uses the Mocha & Chai combination for test runner and assertion library.
 
 ## Project Structure
 
