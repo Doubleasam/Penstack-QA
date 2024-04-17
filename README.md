@@ -9,7 +9,7 @@ $ npm install
 # Run the react app with this command
 $ npm run dev
 
-# Afterwards, run the following command to run the test case on                                           cypress UI on the browser demonstrating the test case
+# Afterwards, run the following command to run the test case on cypress UI on the browser demonstrating the test case
 $ npx cypress open 
 
 
