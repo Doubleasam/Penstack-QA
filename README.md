@@ -5,8 +5,12 @@
 # Run the react app with this command
 $ npm run dev
 
-# Afterwards, run the following command to opwn the app on cypress to show the test case
+# Afterwards, run the following command to run the test case on cypress UI on the browser demonstrating the test case
 $ npx cypress open 
+
+
+#  run the following command to run the test case in the terminal, 
+$ npx cypress run
 
 ```
 
