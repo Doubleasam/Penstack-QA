@@ -20,7 +20,7 @@ $ npx cypress run
 
 
 
-## Tech Details
+## Test Library 
 
 * Cypress - Self proclaiming E2E test framework. Designed to keep UI tests simple and reliable. https://www.cypress.io/
 
