@@ -2,6 +2,10 @@
 
 ```bash
 
+# Run this command, to install required node module dependency
+$ npm install
+
+
 # Run the react app with this command
 $ npm run dev
 
