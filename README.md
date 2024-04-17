@@ -1,8 +1,8 @@
 ## Commands
 
 ```bash
-# Opens up the cypress app UI
-$ npm run cypress:open
+# Opens up the App UI QA Test
+$ npx cypress open 
 
 # Runs the tests headlessly
 $ npm run cypress:run --browser electron
